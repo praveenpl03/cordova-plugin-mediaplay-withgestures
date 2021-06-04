@@ -87,6 +87,6 @@ cordova plugin add cordova-plugin-mediaplay-withgestures
   window.plugins.MediaPlay.resumeAudio();  
 
 ```
-
-## Orginaly Modified the basic ver of cordova-plugin-streaming-media 
+<br>
+Modified the basic ver of cordova-plugin-streaming-media 
 https://github.com/nchutchind/cordova-plugin-streaming-media
