@@ -2,10 +2,11 @@
 
 ## Description
 
-This plugin allows you to stream audio and video in a fullscreen, 
-Gestures add to scroll the bar horizontal touch drag and vertical to increase brightness,
-The duration will be returned on ending play.
-native player on iOS and Android.
+This plugin allows you to stream audio and video in a fullscreen, <br>
+Gestures add to scroll the bar horizontal touch drag and vertical to increase brightness,<br>
+Duration in miliseconds will be returned on ending play. <br>
+You can resume video using the duration returned by passing it to "start" parameter on option<br>
+Native player on iOS and Android.
 
 * 1.0.0 Works with Cordova 3.x
 * * 1.0.1+ Works with Cordova >= 4.0
