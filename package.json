@@ -1,0 +1,43 @@
+{
+  "name": "cordova-plugin-mediaplay-withgestures",
+  "version": "5.0.1",
+  "description": "\n\tThis plugin allow you to Play (Full Screen), Resume, Pause, Next \n    Gestures (Scroll to forward and backward, Vertical to increase brightness),\n    This player can allow you to play from any time,\n    This player return duration on close.\n        \n        \t",
+  "cordova": {
+    "id": "cordova-plugin-mediaplay-withgestures",
+    "platforms": [
+      "ios",
+      "android",
+      "amazon-fireos"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenpl03/cordova-plugin-mediaplay-withgestures.git"
+  },
+  "keywords": [
+    "Streaming",
+    "Media",
+    "Video",
+    "Audio",
+    "Android",
+    "iOS",
+    "Gestures",
+    "Player",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-amazon-fireos"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "PRAVEEN PL",
+  "license": " Apache-2.0 License",
+  "bugs": {
+    "url": "https://github.com/praveenpl03/cordova-plugin-mediaplay-withgestures/issues"
+  },
+  "homepage": "https://github.com/praveenpl03/cordova-plugin-mediaplay-withgestures#readme"
+}

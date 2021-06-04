@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-plugin-mediaplay-withgestures"
+	version="5.0.1">
+
+	<name>MediaPlay</name>
+
+	<description>
+	This plugin allow you to Play (Full Screen), Resume, Pause, Next 
+    Gestures (Scroll to forward and backward, Vertical to increase brightness),
+    This player can allow you to play from any time,
+    This player return duration on close.
+        
+        	</description>
+
+	<author>Praveen PL</author>
+
+	<license> Apache-2.0 License</license>
+
+	<keywords>Streaming, Media, Video, Audio, Android, iOS,Gestures, Player</keywords>
+
+	<repo>https://github.com/praveenpl03/cordova-plugin-mediaplay-withgestures.git</repo>
+
+	<issue>https://github.com/praveenpl03/cordova-plugin-mediaplay-withgestures/issues</issue>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<js-module src="www/MediaPlay.js" name="MediaPlay">
+		<clobbers target="MediaPlay" />
+	</js-module>
+
+	<!-- ios -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="MediaPlay">
+				<param name="ios-package" value="MediaPlay" />
+			</feature>
+		</config-file>
+		<config-file target="*-Info.plist" parent="UIBackgroundModes">
+			<array>
+				<string>audio</string>
+				<string>fetch</string>
+			</array>
+		</config-file>
+		<header-file src="src/ios/MediaPlay.h" />
+		<source-file src="src/ios/MediaPlay.m" />
+		<header-file src="src/ios/LandscapeVideo.h" />
+		<source-file src="src/ios/LandscapeVideo.m" />
+		<header-file src="src/ios/PortraitVideo.h" />
+		<source-file src="src/ios/PortraitVideo.m" />
+		<framework src="MediaPlayer.framework" />
+		
+	</platform>
+
+	<!-- android -->
+	<platform name="android">
+	<framework src="com.swipper.library:library:0.1.1" />
+	     	<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="MediaPlay">
+				<param name="android-package" value="com.praveen.MediaStream.MediaPlay" />
+			</feature>
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:configChanges="orientation|screenSize" android:name="com.praveen.MediaStream.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="com.praveen.MediaStream.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+		</config-file>
+	
+		<resource-file src="src/res/drawable/bright.png"  target="res/drawable/bright.png" />
+		<resource-file src="src/res/drawable/custom_bar.xml"  target="res/drawable/custom_bar.xml" />
+		<resource-file src="src/res/layout/custom_seekview.xml"  target="res/layout/custom_seekview.xml" />
+		<resource-file src="src/res/layout/custom_view.xml"  target="res/layout/custom_view.xml" />
+		<source-file src="src/android/com/praveen/MediaStream/SimpleAudioStream.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/SimpleVideoStream.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/MediaPlay.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/ImageLoadTask.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/Swipper.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/CustomView.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/DialView.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/SeekView.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/CircularSeekBar.java" target-dir="src/com/praveen/MediaStream" />
+	</platform>
+
+	<platform name="amazon-fireos">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="MediaPlay">
+				<param name="android-package" value="com.praveen.MediaPlay" />
+			</feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:configChanges="orientation|screenSize" android:name="com.praveen.SimpleAudioStream" android:label="Simple Audio Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="com.praveen.SimpleVideoStream" android:label="Simple Video Stream"></activity>
+		</config-file>
+		<source-file src="src/android/com/praveen/MediaStream/SimpleAudioStream.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/SimpleVideoStream.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/MediaPlay.java" target-dir="src/com/praveen/MediaStream" />
+		<source-file src="src/android/com/praveen/MediaStream/ImageLoadTask.java" target-dir="src/com/praveen/MediaStream" />
+	</platform>
+</plugin>
