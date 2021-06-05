@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-mediaplay-withgestures",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "\n\tThis plugin allow you to Play (Full Screen), Resume, Pause, Next \n    Gestures (Scroll to forward and backward, Vertical to increase brightness),\n    This player can allow you to play from any time,\n    This player return duration on close.\n        \n        \t",
   "cordova": {
     "id": "cordova-plugin-mediaplay-withgestures",
