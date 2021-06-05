@@ -3,7 +3,7 @@
 	xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-mediaplay-withgestures"
-	version="5.0.2">
+	version="6.0.0">
 
 	<name>MediaPlay</name>
 
@@ -19,7 +19,7 @@
 
 	<license> Apache-2.0 License</license>
 
-	<keywords>Streaming, Media, Video, Audio, Android, iOS,Gestures, Player</keywords>
+	<keywords>Streaming, Media, Video, Audio, Android, iOS,Gestures, Player, ecosystem:cordova,cordova-ios,cordova-android,cordova-amazon-fireos</keywords>
 
 	<repo>https://github.com/praveenpl03/cordova-plugin-mediaplay-withgestures.git</repo>
 
